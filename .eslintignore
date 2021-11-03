@@ -1,0 +1,4 @@
+node_modules
+test
+vite.config.ts
+dist
