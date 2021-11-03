@@ -1,0 +1,55 @@
+.loginBoxWrapper {
+  background: #17171a;
+  height: 100vh;
+  width: 100%;
+
+  padding: 440px 80px 0;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  strong {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 10px;
+  }
+  .loginBoxForm {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+
+    .emailInput, .passwordInput {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+    .signInInput, .signInButton {
+      border: 1px solid rgba(10, 10, 10, 0.9);
+      font-size: 16px;
+    }
+    
+    .signInInput {
+      height: 40px;
+      margin: 6px;
+      padding: 2px;
+      width: 100%;
+    }
+    
+    .signInButton {
+      background: orange;
+      height: 40px;
+      margin: 6px;
+      width: 88%;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
+      }
+    }
+  }  
+}
