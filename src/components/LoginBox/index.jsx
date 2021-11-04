@@ -10,8 +10,10 @@ function LoginBox() {
   const [password, setPassword] = useState('');
   return (
     <div className={ styles.loginBoxWrapper }>
-      <strong>[ Today ]</strong>
-      <strong>Organize o seu dia na Ebytr</strong>
+      <div className={ styles.loginBoxText }>
+        <strong>[ Today ]</strong>
+        <strong>Organize o seu dia na Ebytr</strong>
+      </div>
       <form
         action=""
         className={ styles.loginBoxForm }

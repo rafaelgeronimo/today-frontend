@@ -1,8 +1,9 @@
 import LoginBox from "../../components/LoginBox";
+import styles from './styles.module.scss';
 
 function App() {
   return (
-    <main>
+    <main className={ styles.backgroundImage }>
       <LoginBox />
     </main>
   );

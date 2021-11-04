@@ -1,0 +1,46 @@
+.taskFormComponent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px auto;
+  width: 50vw;
+  
+  .taskForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
+    
+    input {
+      height: 30px;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+    input:nth-child(1), input:nth-child(2) {
+      padding: 20px 5px;
+    }
+    input:nth-child(5) {
+      border: 0;
+      font-size: 1.4rem;
+      height: 50px;
+      background: orange;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
+      }
+    }
+    .taskDateFields {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .dateLabel input {
+      width: 18rem;
+    }
+    select {
+      height: 40px;
+      font-size: 1.2rem;
+    }
+  }
+}
