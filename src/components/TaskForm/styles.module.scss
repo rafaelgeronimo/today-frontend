@@ -21,7 +21,14 @@
       padding: 20px 5px;
     }
     input:nth-child(5) {
+      border: 0;
+      font-size: 1.4rem;
       height: 50px;
+      background: orange;
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.8);
+      }
     }
     .taskDateFields {
       display: flex;

@@ -9,16 +9,10 @@ function UserProfile() {
     <section>
       <h1>{ userData.name }</h1>
       <img src={ userData.avatar } alt="Avatar" className={ styles.avatar } />
-      <Link to="/">
-        <button onClick={ signOut }>
-          Sair
-        </button>
-      </Link>
-      <Link to={ userData ? "/tasks" : "/" }>
-        <button type="button">
-          Minhas tarefas
-        </button>
-      </Link>
+      <p>
+        Perfil:
+        { userData.role === 'user' ? <span> Usuário</span> : <span> Administrador</span> }
+      </p>
     </section>
   );
 }

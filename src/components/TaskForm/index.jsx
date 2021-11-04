@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../../services/api";
 
 import styles from './styles.module.scss';
@@ -23,8 +23,8 @@ const TaskForm = () => {
       })
       .catch(error => {
         console.log(error.response);
-      })
-  }
+      });
+  };
 
   return (
     <div className={ styles.taskFormComponent }>
@@ -53,6 +53,7 @@ const TaskForm = () => {
             <input
               name="initialDate"
               type="date"
+              required
               onChange={ (e) => setInitialDate(e.target.value) }
               />
           </label>
@@ -62,6 +63,7 @@ const TaskForm = () => {
             <input
               name="finalDate"
               type="date"
+              required
               onChange={ (e) => setEndDate(e.target.value) }
               />
           </label>
