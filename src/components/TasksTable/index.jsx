@@ -6,7 +6,8 @@ import api from '../../services/api';
 const TasksTable = () => {
   const { userData } = useContext(AuthContext);
   const userId = userData.id;
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([]);
+  
   useEffect(() => {
     const token = localStorage.getItem('@today:token');
     if (token) {
@@ -18,22 +19,26 @@ const TasksTable = () => {
         console.log(error.response);
       });
     }
-  }, []);
-
+  });
   const columns = [
     {
-      title: 'Título'
+      title: 'Título',
+      id: '1'
     },
     {
-      title: 'Data inicial'
+      title: 'Data inicial',
+      id: '2'
     },
     {
-      title: 'Data final'
+      title: 'Data final',
+      id: '3'
     },
     {
-      title: 'Situação'
+      title: 'Situação',
+      id: '4'
     }
   ];
+
   return (
     <>
       { tasks.length === 0 ? 
@@ -41,11 +46,11 @@ const TasksTable = () => {
           <p>Não há tarefas cadastradas para {userData.name}.</p>
           <p>Utilize o formulário acima para cadastrar suas tarefas.</p>
         </div> : 
-        <table>
+        <table className="sortable">
           <thead>
             <tr>
               { columns.map((column) => (
-                <th>
+                <th key={ column.id }>
                   { column.title }
                 </th>
               )) }
@@ -53,9 +58,9 @@ const TasksTable = () => {
           </thead>
           <tbody>
               { tasks.map((task) => (
-                <tr key={ task.id }>
+                <tr key={ task._id }>
                     <td>
-                      { task.title }
+                        { task.title }
                     </td>
                     <td>
                       { task.initialDate }
@@ -64,7 +69,7 @@ const TasksTable = () => {
                       { task.endDate }
                     </td>
                     <td>
-                      { task.taskStatus }
+                      { task.taskStatus}
                     </td>
                 </tr>
               )) }
