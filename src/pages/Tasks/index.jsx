@@ -6,13 +6,7 @@ function App() {
   return (
     <main>
       <Header />
-      <p>Está na página de tarefas</p>
       <TaskList />
-      <Link to="/profile">
-        <button type="button">
-          Perfil
-        </button>
-      </Link>
     </main>
   );
 }
