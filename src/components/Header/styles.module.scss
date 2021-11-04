@@ -1,0 +1,16 @@
+.header {
+  background-color: #385385;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 30px;
+  width: 100vw;
+
+  .navmenu {
+    a {
+      color: whitesmoke;
+      padding: 0 10px;
+      text-decoration: none;
+    }
+  }
+}

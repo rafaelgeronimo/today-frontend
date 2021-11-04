@@ -1,7 +1,8 @@
 .contentWrapper {
-  max-width: 1200px;
-  height: 100vh;
-  margin: 0 auto;
   display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 auto;
+  // max-width: 1200px;
   position: relative;
 }
