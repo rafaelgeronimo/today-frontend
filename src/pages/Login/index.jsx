@@ -1,4 +1,5 @@
-import LoginBox from "../../components/LoginBox";
+import React from 'react';
+import LoginBox from '../../components/LoginBox';
 import styles from './styles.module.scss';
 
 function App() {

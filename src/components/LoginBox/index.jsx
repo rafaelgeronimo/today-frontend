@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
-import { AuthContext } from "../../contexts/auth";
+import React, { useContext, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { RiLockPasswordLine } from 'react-icons/ri';
+import { AuthContext } from '../../contexts/auth';
 import styles from './styles.module.scss';
 
 function LoginBox() {
@@ -17,14 +17,16 @@ function LoginBox() {
       <form
         action=""
         className={ styles.loginBoxForm }
-        onSubmit={ (e) => (e.preventDefault(), signIn(email, password)) }>
+        onSubmit={ (e) => (e.preventDefault(), signIn(email, password)) }
+      >
         <div className={ styles.emailInput }>
           <AiOutlineMail size="32" />
           <input
             type="email"
             placeholder="E-mail"
             className={ styles.signInInput }
-            onChange={ (e) => setEmail(e.target.value) } />
+            onChange={ (e) => setEmail(e.target.value) }
+          />
         </div>
         <div className={ styles.passwordInput }>
           <RiLockPasswordLine size="32" />
@@ -32,13 +34,15 @@ function LoginBox() {
             type="password"
             placeholder="Senha"
             className={ styles.signInInput }
-            onChange={ (e) => setPassword(e.target.value) } />
+            onChange={ (e) => setPassword(e.target.value) }
+          />
         </div>
         <input
           type="submit"
           className={ styles.signInButton }
-          value="Login" />
-        </form>
+          value="Login"
+        />
+      </form>
     </div>
   );
 }
