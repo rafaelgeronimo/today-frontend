@@ -6,6 +6,7 @@
 }
 
 body {
-  background: #121214;
+  background: #121214 url('../assets/img/loginbox_background.jpg') no-repeat;
+  background-size: 100%;
   color: #e1e1e6;
 }
