@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../../contexts/auth";
+import React, { useContext } from 'react';
+import { AuthContext } from '../../contexts/auth';
 import styles from './styles.module.scss';
 
 function UserProfile() {
-  const { userData, signOut } = useContext(AuthContext);
+  const { userData } = useContext(AuthContext);
   return (
-    <section>
+    <section className={ styles.userProfileSection }>
       <h1>{ userData.name }</h1>
       <img src={ userData.avatar } alt="Avatar" className={ styles.avatar } />
       <p>

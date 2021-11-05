@@ -1,3 +1,12 @@
+.userProfileSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 75px;
+  margin: 20vh auto;
+  max-width: 1200px;
+}
+
 .avatar {
   border-radius: 50%;
   width: 150px;

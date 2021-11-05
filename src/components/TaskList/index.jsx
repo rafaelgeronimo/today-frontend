@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import api from '../../services/api';
+import React from 'react';
 import styles from './styles.module.scss';
 
 import TasksTable from '../TasksTable';

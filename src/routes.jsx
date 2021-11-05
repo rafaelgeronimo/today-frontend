@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import { AuthContext } from "./contexts/auth";
+import React, { useContext } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { AuthContext } from './contexts/auth';
 
 import Login from './pages/Login';
 import Tasks from './pages/Tasks';

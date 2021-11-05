@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import api from '../services/api';
 
 export const AuthContext = createContext({});
@@ -12,7 +12,7 @@ function AuthProvider(props) {
       email,
       password,
     });
-    const { token, user, message } = response.data;
+    const { token, user } = response.data;
     setUserData(user);
     const userDataString = JSON.stringify(user);
     if (token) {

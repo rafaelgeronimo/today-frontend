@@ -9,16 +9,17 @@ function Header() {
   return (
     <header className={ styles.header }>
       <div>
-      Olá { name }
+        Olá&nbsp;
+        { name }
       </div>
       <nav className={ styles.navmenu }>
-        <Link to='/tasks'>
+        <Link to="/tasks">
           Tarefas
         </Link>
-        <Link to='/profile'>
+        <Link to="/profile">
           Perfil
         </Link>
-        <Link to='/' onClick={ signOut }>
+        <Link to="/" onClick={ signOut }>
           Sair
         </Link>
       </nav>
