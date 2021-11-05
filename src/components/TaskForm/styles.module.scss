@@ -12,6 +12,10 @@
     width: 100%;
     font-size: 1.2rem;
     
+    textarea {
+      display: none;
+    }
+
     input {
       height: 30px;
       margin: 10px 0;
@@ -20,7 +24,7 @@
     input:nth-child(1), input:nth-child(2) {
       padding: 20px 5px;
     }
-    input:nth-child(5) {
+    input[type=submit] {
       border: 0;
       font-size: 1.4rem;
       height: 50px;

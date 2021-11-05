@@ -1,10 +1,10 @@
-import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import React, { useState } from 'react';
+import { Modal, Button } from 'react-bootstrap';
 
 function TaskModal(props) {
   return (
     <Modal
-      {...props}
+      { ...props }
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -21,10 +21,10 @@ function TaskModal(props) {
         </p>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
+        <Button onClick={ onHide }>Close</Button>
       </Modal.Footer>
     </Modal>
-  )
+  );
 }
 
 function RenderModal() {
@@ -41,6 +41,6 @@ function RenderModal() {
       ></TaskModal>
     </>
   )
-}
+};
 
 export default RenderModal;
